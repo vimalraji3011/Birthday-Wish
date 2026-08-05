@@ -136,7 +136,7 @@ export const timeline: TimelineEntry[] = [
   {
     title: "Today's Birthday",
     when: "Right now",
-    body: "Another year of you in the world. I don't take a single one of them for granted. Here's to all the chapters we haven't written yet.",
+    body: "Life-la marakka mudiyadha moments-na perusa nadandhadhu illa... Aimless short drives... midnight conversations... reason illaama sirichadhu... un kooda irukkura andha peaceful comfort... Mukkiyama... naan break aagara maadhiri irundha nerathula, 'Ellam okay aagidum' nu nee sonna andha oru sentence... Adhu enakku appo thevaiyana confidence-um, comfort-um dhaan. ❤️",
     glyph: "🎂",
   },
 ];
