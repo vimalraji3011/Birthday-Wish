@@ -13,11 +13,11 @@
 
 export const friend = {
   /** Shown throughout the site — the guest of honour. */
-  name: "Bestie",
+  name: "KUTTA",
   /** Used in the letter's greeting. Try their nickname here. */
   greeting: "My dearest friend",
   /** Appears in the browser tab and link previews. */
-  pageTitle: "Happy Birthday, Bestie",
+  pageTitle: "Happy Birthday, KUTTA",
 };
 
 export const welcome = {
@@ -29,17 +29,17 @@ export const welcome = {
 
 /** Scene 3 — typed out one paragraph at a time. */
 export const typedMessage: string[] = [
-  "There are people who pass through your life, and then there are people who become part of it.",
-  "You are the second kind. The person I text without thinking, laugh with without trying, and trust without asking.",
-  "Today the world gets to celebrate you. But honestly? I've been celebrating you all along.",
-  "So happy birthday, my favourite human. This one's entirely for you.",
-];
+  "Sila per namma life-la vandhu poiduvanga... aana sila per mattum namma life-oda oru part-ah maariduvanga.",
+  "Nee andha second type. Yosikkama message panna thonra ore aal, effort illama sirikka veikkura aal, edhaiyum yosikkama nambura aal.",
+  "Innaiku ellarum un birthday celebrate panranga. Aana unmaiya sollanum-na, naan unna romba naalave celebrate pannitu dhaan iruken.",
+  "So... Happy Birthday CONTENT,KUTTA, en favourite human. ❤️ Indha surprise, indha site... mothamum unakkaga mattum dhaan.",
+  ];
 
 export const giftScene = {
   eyebrow: "Scene four",
   title: "I left something here for you",
   hint: "Tap the box",
-  opened: "Happy Birthday!",
+  opened: "Happy Birthday KUTTA!",
   openedSub: "The music's playing. Keep scrolling — there's so much more.",
 };
 
@@ -112,13 +112,13 @@ export const timeline: TimelineEntry[] = [
   {
     title: "First Meeting",
     when: "The beginning",
-    body: "Neither of us remembers the exact words. We just remember that by the end of it, it felt like we'd known each other for years.",
+    body: "Namma first pesuna exact words ippo rendu perukkume neyabagam illa I think CONTENT than una kuputi irukpan nu nenaikaran. Ana andha conversation mudinja apram, pala varushama therinja maari oru feel vandhuduchu.",
     glyph: "✨",
   },
   {
     title: "Funny Moments",
     when: "Constantly, still",
-    body: "The jokes that make no sense to anyone else. The one look across a room that says everything. My cheeks hurt just thinking about it.",
+    body: "Namma rendu perukkulla irukkura jokes... mathavangalukku oru percent kooda puriyaadhu. Oru chinna look pothum, enna sollanum-nu rendu perukkume purinjidum. Andha moments ellam nenachaale involuntary-ah sirippu vandhudum... cheeks-e valikkura alavukku. ❤️😂",
     glyph: "😂",
   },
   {
@@ -136,7 +136,7 @@ export const timeline: TimelineEntry[] = [
   {
     title: "Today's Birthday",
     when: "Right now",
-    body: "Another year of you in the world. I don't take a single one of them for granted. Here's to all the chapters we haven't written yet.",
+    body: "Life-la marakka mudiyadha moments-na perusa nadandhadhu illa... Aimless short drives... midnight conversations... reason illaama sirichadhu... un kooda irukkura andha peaceful comfort... Mukkiyama... naan break aagara maadhiri irundha nerathula, 'Ellam okay aagidum' nu nee sonna andha oru sentence... Adhu enakku appo thevaiyana confidence-um, comfort-um dhaan. ❤️",
     glyph: "🎂",
   },
 ];
@@ -202,7 +202,7 @@ export const cakeScene = {
 };
 
 export const fireworksScene = {
-  headline: "Happy Birthday!",
+  headline: "Happy Birthday KUTTA!",
   sub: "Every light up there is one more reason I'm glad you were born.",
 };
 
