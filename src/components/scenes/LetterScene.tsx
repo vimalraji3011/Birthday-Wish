@@ -147,7 +147,7 @@ export default function LetterScene() {
       <Reveal delay={0.3} className="mt-16 flex flex-col items-center gap-3 text-center">
         <span className="h-10 w-px bg-gradient-to-b from-transparent via-pink/60 to-transparent" />
         <p className="font-display text-lg text-fg-muted italic sm:text-xl">
-          Happy birthday, {friend.name}. Here&rsquo;s to another trip around the sun.
+          Happy birthday, {friend.name}! 🎉
         </p>
       </Reveal>
     </section>

@@ -557,3 +557,22 @@
 .flip-face-back {
   transform: rotateY(180deg);
 }
+
+.flip-face-scroll {
+  touch-action: pan-y;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.45) transparent;
+}
+
+.flip-face-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.flip-face-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.flip-face-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+}

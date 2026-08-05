@@ -57,42 +57,42 @@ export type Memory = {
 
 export const memories: Memory[] = [
   {
-    src: "/memories/memory-1.jpg",
+    src: "/memories/memory-1.jpeg",
     alt: "Warm dusk gradient with drifting light",
     caption: "The day we decided we were stuck with each other",
     date: "Where it started",
     span: "tall",
   },
   {
-    src: "/memories/memory-2.jpg",
+    src: "/memories/memory-2.jpeg",
     alt: "Golden confetti light on a deep violet field",
     caption: "That laugh nobody else understood",
     date: "Our inside joke",
     span: "wide",
   },
   {
-    src: "/memories/memory-3.jpg",
+    src: "/memories/memory-3.jpeg",
     alt: "Rose and gold bokeh over a night sky",
     caption: "Midnight conversations that solved nothing and everything",
     date: "3 a.m. club",
   span: "square",
   },
   {
-    src: "/memories/memory-4.jpg",
+    src: "/memories/memory-4.jpeg",
     alt: "Aurora ribbons in pink and purple",
     caption: "The trip we planned badly and loved completely",
     date: "Adventure #1",
     span: "wide",
   },
   {
-    src: "/memories/memory-5.jpg",
+    src: "/memories/memory-5.jpeg",
     alt: "Soft candlelight glow in warm amber",
     caption: "You showing up when you didn't have to",
     date: "The day it mattered",
     span: "tall",
   },
   {
-    src: "/memories/memory-6.jpg",
+    src: "/memories/memory-6.jpeg",
     alt: "Starlit gradient with floating sparks",
     caption: "And every ordinary day in between",
     date: "Still going",
@@ -155,7 +155,7 @@ export const reasons: Reason[] = [
     glyph: "🌞",
     teaser: "It changes rooms",
     message:
-      "You walk in and the temperature of the room changes. I've watched it happen a hundred times. You have no idea you're doing it.",
+      "Nee enga vandhaalum... andha place-oda vibe-e maaridum. ❤ Adha naan ethanayo thadava paathiruken. Un presence-ku oru thani magic irukku.Aana adhu unakke theriyadhu... adhu dhaan unna innum special aakkudhu. ✨",
   },
   {
     title: "Your Kindness",
@@ -169,28 +169,28 @@ export const reasons: Reason[] = [
     glyph: "🛡️",
     teaser: "Never once conditional",
     message:
-      "You've believed in things I said out loud before I believed them myself. That's a rare thing to give someone, and you give it freely.",
+      "Nee panra kindness-ku audience-um, appreciation-um thevai illa. ❤️ Chinna chinna vishayangalayum nyabagam vechukkuradhu... mudhala nee dhaan 'epdi irukka?' nu ketkuradhu... un kooda irukkura ellarukkum oru comfortable feeling kudukkuradhu... Adhu dhaan nee. Adhu dhaan unnoda azhagu. ✨",
   },
   {
     title: "Your Caring Nature",
     glyph: "🌱",
     teaser: "You notice everything",
     message:
-      "You catch the shift in someone's voice before they've said anything is wrong. Being cared for by you feels like being paid attention to.",
+      "Vaarthaigal sollradhukku munnaadiye... voice-la irukkura chinna change-ah nee notice panniduva. 'Enna aachu?' nu ketkaama kooda, unakku purinjidum. Un care-la oru special feeling irukku... adhu perusa edhuvum illa... aana nee kudukkura andha genuine attention dhaan ellathayum maathidudhu. ❤️",
   },
   {
     title: "Your Funny Moments",
     glyph: "🎭",
     teaser: "Comic timing, unmatched",
     message:
-      "You have ruined my composure in serious situations more times than I can count, and I would not change a thing about that.",
+     "Life romba serious-ah irundha nerathulayum... Oru mokka joke... oru random look... illa oru dialogue.. Adhu pothum, naan sirippu adakka mudiyama poidum. 😂 Unnaala naan composure lose pannadhu neraya thadava... Aana andha moments ellam dhaan ippo en favourite memories. ❤️" ,
   },
   {
     title: "Your Positivity",
     glyph: "🌈",
     teaser: "Stubbornly hopeful",
     message:
-      "Not the fake kind. The kind that looks at something difficult and says 'okay, so what do we do about it' — and then actually does it.",
+     "Ellarum problem pathu bayapaduvaanga... Nee mattum, 'Okay... solution enna?' nu yosippa.Pesi motivate pannradhoda mudiyadhu... nee action eduthu mudichu kaatuva.Adhu dhaan unnai vera level aakkudhu. ❤️" ,
   },
 ];
 
@@ -208,14 +208,14 @@ export const fireworksScene = {
 
 /** Scene 10 — the handwritten letter. */
 export const letter = {
-  paragraphs: [
-    "Thank you. For every single time you showed up, answered late at night, sat with me in the quiet, and stayed when it would have been easier not to.",
-    "Friendship like ours isn't luck. It's you choosing, over and over, to be someone I can count on. I notice. I always notice.",
-    "This year, I hope life is generous with you. I hope you get happiness that doesn't need explaining, work that makes you proud, health that lets you enjoy all of it, and reasons to laugh until you can't breathe.",
-    "And whatever this year brings — I'm right here. Same as always.",
-  ],
+paragraphs: [
+  "Thanks da... En life-la nee irundha ovvoru moment-kum. Night late-ah irundhaalum call attend pannadhu... naan silent-ah irundha nerathula en kooda amaidhiya irundhadhu... enakku yaaravadhu venum-nu thonra nerathula oru naalum vittu pogama en pakkathula ninnadhu... idhellathukkum romba thanks. ❤️",
+  "Namma friendship luck-naala vandhadhu illa. Ovvoru thadavaiyum nee indha friendship-ah choose pannadhu naala dhaan. Nee eppovume naan nambura oruthan-ah irundha. Adha naan notice pannuren... eppovume notice pannittu dhaan iruken. 🫶",
+  "Indha pudhu varusham unakku life neraya santhoshathai kudukkanum. Unna proud feel panna vaikkura work, nalla health, stress illaama enjoy panna mudiyura life, reason illaama sirikka veikkura moments... idhellam unakku kidaikkanum. ✨",
+  "Indha varusham enna kondu vandhaalum sari... naan eppovum un pakkathula dhaan irupen. Eppadi irundhomo, adhe maadhiri... always. ❤️"
+],
   signOff: "With Love,",
-  signature: "Your Best Friend ❤️",
+  signature: "Your Best Friend ❤️  V ",
   postscript: "P.S. Play it again. I made the music too.",
 };
 
