@@ -64,7 +64,7 @@ export const memories: Memory[] = [
     span: "tall",
   },
   {
-    src: "/memories/memory-2.jpeg",
+    src: "/memories/memory-6.jpeg",
     alt: "Golden confetti light on a deep violet field",
     caption: "That laugh nobody else understood",
     date: "Our inside joke",
@@ -92,7 +92,7 @@ export const memories: Memory[] = [
     span: "tall",
   },
   {
-    src: "/memories/memory-6.jpeg",
+    src: "/memories/memory-2.jpeg",
     alt: "Starlit gradient with floating sparks",
     caption: "And every ordinary day in between",
     date: "Still going",
@@ -124,19 +124,19 @@ export const timeline: TimelineEntry[] = [
   {
     title: "Adventures",
     when: "Whenever we got the chance",
-    body: "Wrong turns, terrible planning, questionable snacks — and somehow the best days of the year, every single time.",
+    body: "Snacks share pannadhu... namma problems-ah oruthar kitta oruthar share pannadhu... kashtama irukkumbodhu rendu perum orutharukku oruthar boost pannadhu... ❤️ Judgement illaama namma rendu perum comfortable-ah irukkura andha comfort zone... thevaiyana nerathula advice pannadhu... pudhu pudhu places-ku poi explore pannadhu... random-ah plans panni trips pona moments... Idhellam perusa theriyama irukkalaam... Aana eppadiyo, indha chinna chinna moments dhaan ovvoru varushamum namma life-la best days-ah maaridudhu. 🥹❤️ Namma friendship-la memories mattum illa... orutharukku oruthar irundha support, comfort, laughter ellame irukku. ✨",
     glyph: "🧭",
   },
   {
     title: "Best Memories",
     when: "Kept safe",
-    body: "The quiet ones I return to most: long drives, late talks, and you telling me it was going to be fine when I really needed to hear it.",
+    body: "Life-la marakka mudiyadha moments-na perusa nadandhadhu illa... Aimless short drives... midnight conversations... reason illaama sirichadhu... un kooda irukkura andha peaceful comfort... Mukkiyama... naan break aagara maadhiri irundha nerathula, 'Ellam okay aagidum' nu nee sonna andha oru sentence... Adhu enakku appo thevaiyana confidence-um, comfort-um dhaan. ❤️",
     glyph: "💫",
   },
   {
     title: "Today's Birthday",
     when: "Right now",
-    body: "Life-la marakka mudiyadha moments-na perusa nadandhadhu illa... Aimless short drives... midnight conversations... reason illaama sirichadhu... un kooda irukkura andha peaceful comfort... Mukkiyama... naan break aagara maadhiri irundha nerathula, 'Ellam okay aagidum' nu nee sonna andha oru sentence... Adhu enakku appo thevaiyana confidence-um, comfort-um dhaan. ❤️",
+    body: "Rendu varusham pochu... aana namma friendship mattum innum strong aagitte dhaan irukku. ❤️ Innaiku un birthday. Naalaiku pudhu memories. Adhukku apram innum pala years of laughter, adventures, and stories. Idhu end illa... idhu innum oru pudhu chapter dhaan. Cheers to all the beautiful chapters we're yet to write together. 🥂✨ Happy Birthday da! ❤️",
     glyph: "🎂",
   },
 ];

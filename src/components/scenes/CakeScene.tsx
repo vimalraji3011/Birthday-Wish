@@ -113,7 +113,7 @@ export default function CakeScene() {
           {candlesBlown ? (
             <LottieBox
               data={sparkle}
-              className="pointer-events-none absolute -top-10 left-1/2 h-72 w-72 -translate-x-1/2 opacity-70"
+              className="pointer-events-none absolute -top-10 left-1/2 h-56 w-56 -translate-x-1/2 opacity-70 sm:h-72 sm:w-72"
             />
           ) : null}
 
