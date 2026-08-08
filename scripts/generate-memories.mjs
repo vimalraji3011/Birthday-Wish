@@ -101,6 +101,6 @@ for (const spec of SPECS) {
   const svg = svgFor(spec);
   await sharp(Buffer.from(svg))
     .jpeg({ quality: 82, mozjpeg: true })
-    .toFile(path.join(OUT, `${spec.name}.jpg`));
+    .toFile(path.join(OUT, `${spec.name}.jpeg`));
   console.log("wrote", spec.name, `${spec.w}x${spec.h}`);
 }

@@ -85,7 +85,7 @@ export default function ReasonsScene() {
                   {/* Opaque and saturated on purpose: the earlier translucent
                       wash left white text unreadable in light mode. */}
                   <div
-                    className="flip-face flip-face-back justify-between border border-white/15 p-6 sm:p-7"
+                    className="flip-face flip-face-back gap-3 border border-white/15 p-6 sm:p-7"
                     style={{
                       background:
                         "linear-gradient(150deg, #E8336F 0%, #A93FB4 52%, #6B44E0 100%)",
@@ -93,13 +93,13 @@ export default function ReasonsScene() {
                         "inset 0 1px 0 rgba(255,255,255,0.28), 0 24px 60px -28px rgba(138,92,255,0.7)",
                     }}
                   >
-                    <span className="text-[0.62rem] tracking-[0.24em] text-gold-soft uppercase">
+                    <span className="shrink-0 text-[0.62rem] tracking-[0.24em] text-gold-soft uppercase">
                       {r.title}
                     </span>
-                    <p className="font-display text-[1.02rem] leading-relaxed text-white sm:text-[1.1rem]">
+                    <p className="flip-face-scroll min-h-0 flex-1 overflow-y-auto font-display text-[1.02rem] leading-relaxed text-white sm:text-[1.1rem]">
                       {r.message}
                     </p>
-                    <span className="text-sm text-white/80">— me, obviously</span>
+                    <span className="shrink-0 text-sm text-white/80">— me, obviously</span>
                   </div>
                 </div>
               </button>

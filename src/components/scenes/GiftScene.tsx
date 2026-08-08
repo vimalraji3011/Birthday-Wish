@@ -10,6 +10,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { useExperience } from "@/components/providers/ExperienceProvider";
 import { giftScene } from "@/config/content";
 import { giftBurst } from "@/lib/celebrate";
+import { useMatchMedia } from "@/lib/useMatchMedia";
 import sparkle from "@/animations/sparkle.json";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -18,6 +19,9 @@ export default function GiftScene() {
   const { giftOpened, openGift } = useExperience();
   const boxRef = useRef<HTMLButtonElement | null>(null);
   const [flash, setFlash] = useState(false);
+  const isCompact = useMatchMedia("(max-width: 639px)");
+  const isTablet = useMatchMedia("(max-width: 1023px)");
+  const boxSize = isCompact ? 190 : isTablet ? 240 : 280;
 
   const handleOpen = useCallback(() => {
     if (giftOpened) return;
@@ -77,7 +81,7 @@ export default function GiftScene() {
         {giftOpened ? (
           <LottieBox
             data={sparkle}
-            className="pointer-events-none absolute h-[520px] w-[520px] opacity-80"
+            className="pointer-events-none absolute h-72 w-72 opacity-80 sm:h-96 sm:w-96 lg:h-[520px] lg:w-[520px]"
           />
         ) : null}
 
@@ -92,7 +96,7 @@ export default function GiftScene() {
           whileHover={giftOpened ? undefined : { scale: 1.05 }}
           whileTap={giftOpened ? undefined : { scale: 0.96 }}
         >
-          <GiftBox open={giftOpened} size={280} interactive={!giftOpened} />
+          <GiftBox open={giftOpened} size={boxSize} interactive={!giftOpened} />
         </motion.button>
       </Reveal>
 

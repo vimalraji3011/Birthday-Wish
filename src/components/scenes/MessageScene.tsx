@@ -57,7 +57,7 @@ export default function MessageScene() {
           animate={inView ? { opacity: 0.16, scale: 1 } : {}}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           aria-hidden
-          className="font-display pointer-events-none absolute -top-14 -left-4 text-[9rem] leading-none text-pink select-none sm:-left-10 sm:text-[12rem]"
+          className="font-display pointer-events-none absolute -top-8 -left-1 text-[6rem] leading-none text-pink select-none sm:-top-14 sm:-left-10 sm:text-[12rem]"
         >
           “
         </motion.span>

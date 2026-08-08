@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import GiftBox from "@/components/fx/GiftBox";
 import LottieBox from "@/components/ui/LottieBox";
 import { useExperience } from "@/components/providers/ExperienceProvider";
+import { useMatchMedia } from "@/lib/useMatchMedia";
 import sparkle from "@/animations/sparkle.json";
 
 const DURATION = 3400;
@@ -13,6 +14,8 @@ export default function LoadingScene() {
   const { stage, finishLoading } = useExperience();
   const calm = useReducedMotion();
   const [progress, setProgress] = useState(0);
+  const isCompact = useMatchMedia("(max-width: 639px)");
+  const boxSize = isCompact ? 150 : 210;
 
   useEffect(() => {
     if (stage !== "loading") return;
@@ -35,13 +38,18 @@ export default function LoadingScene() {
   }, [stage, finishLoading, calm]);
 
   // Hold the page still (and at the top) while the surprise is being prepared.
+  // iOS Safari still rubber-bands a merely `overflow: hidden` body via touchmove,
+  // so the root element is locked too.
   useEffect(() => {
     if (stage !== "loading") return;
-    const previous = document.body.style.overflow;
+    const previousBody = document.body.style.overflow;
+    const previousRoot = document.documentElement.style.overflow;
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     window.scrollTo(0, 0);
     return () => {
-      document.body.style.overflow = previous;
+      document.body.style.overflow = previousBody;
+      document.documentElement.style.overflow = previousRoot;
     };
   }, [stage]);
 
@@ -70,14 +78,14 @@ export default function LoadingScene() {
           <div className="relative grid place-items-center">
             <LottieBox
               data={sparkle}
-              className="pointer-events-none absolute h-[420px] w-[420px] opacity-70"
+              className="pointer-events-none absolute h-56 w-56 opacity-70 sm:h-80 sm:w-80 md:h-[420px] md:w-[420px]"
             />
             <motion.div
               initial={{ opacity: 0, scale: 0.82 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <GiftBox size={210} />
+              <GiftBox size={boxSize} />
             </motion.div>
           </div>
 

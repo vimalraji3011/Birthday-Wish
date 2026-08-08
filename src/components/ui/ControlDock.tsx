@@ -1,8 +1,9 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useExperience } from "@/components/providers/ExperienceProvider";
+import { useMatchMedia } from "@/lib/useMatchMedia";
 
 function SunIcon() {
   return (
@@ -108,11 +109,25 @@ const btn =
 export default function ControlDock() {
   const { theme, toggleTheme, music, giftOpened } = useExperience();
   const [sliderOpen, setSliderOpen] = useState(false);
+  const noHover = useMatchMedia("(hover: none)");
+  const dockRef = useRef<HTMLDivElement | null>(null);
 
   const fill = `${Math.round((music.muted ? 0 : music.volume) * 100)}%`;
 
+  // Touch devices have no hover, so the speaker tap doubles as the slider's
+  // open/close toggle; a tap outside the dock closes it again.
+  useEffect(() => {
+    if (!noHover || !sliderOpen) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (!dockRef.current?.contains(e.target as Node)) setSliderOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [noHover, sliderOpen]);
+
   return (
     <motion.div
+      ref={dockRef}
       initial={{ opacity: 0, y: -14 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -140,8 +155,21 @@ export default function ControlDock() {
 
               <button
                 type="button"
-                onClick={music.toggleMute}
-                onFocus={() => setSliderOpen(true)}
+                onClick={() => {
+                  if (noHover) {
+                    // First tap just reveals the slider; only a second tap mutes.
+                    if (!sliderOpen) {
+                      setSliderOpen(true);
+                      return;
+                    }
+                  }
+                  music.toggleMute();
+                }}
+                onFocus={() => {
+                  // Tapping a button focuses it first, then clicks it — letting
+                  // this fire on touch would race the tap-to-reveal logic above.
+                  if (!noHover) setSliderOpen(true);
+                }}
                 onMouseEnter={() => setSliderOpen(true)}
                 className={btn}
                 aria-label={music.muted ? "Unmute" : "Mute"}

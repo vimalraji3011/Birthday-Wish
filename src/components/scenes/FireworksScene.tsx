@@ -30,7 +30,7 @@ export default function FireworksScene() {
   return (
     <section
       id="fireworks"
-      className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden px-6 py-24"
+      className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden px-4 py-16 sm:px-6 sm:py-24"
     >
       <Fireworks active={candlesBlown} intensity={1} />
       <FloatingHearts />
