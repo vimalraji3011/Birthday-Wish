@@ -10,7 +10,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { BirthdayMusic, type MusicMode } from "@/lib/music";
+import { AudioTrack } from "@/lib/audioTrack";
 
 export type Theme = "dark" | "light";
 export type Stage = "loading" | "story";
@@ -33,12 +33,10 @@ type ExperienceValue = {
     playing: boolean;
     volume: number;
     muted: boolean;
-    mode: MusicMode;
     toggle: () => void;
     start: () => void;
     setVolume: (v: number) => void;
     toggleMute: () => void;
-    setMode: (m: MusicMode) => void;
   };
 };
 
@@ -52,12 +50,11 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
   const [candlesBlown, setCandlesBlown] = useState(false);
   const [theme, setTheme] = useState<Theme>("dark");
 
-  const engine = useRef<BirthdayMusic | null>(null);
+  const engine = useRef<AudioTrack | null>(null);
   const [musicReady, setMusicReady] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolumeState] = useState(0.7);
   const [muted, setMuted] = useState(false);
-  const [mode, setModeState] = useState<MusicMode>("gentle");
 
   // Pick up the theme the inline boot script already applied.
   useEffect(() => {
@@ -81,7 +78,7 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const getEngine = useCallback(() => {
-    if (!engine.current) engine.current = new BirthdayMusic();
+    if (!engine.current) engine.current = new AudioTrack();
     return engine.current;
   }, []);
 
@@ -108,25 +105,17 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
     }
   }, [getEngine]);
 
-  const setVolume = useCallback(
-    (v: number) => {
-      setVolumeState(v);
-      if (v > 0) setMuted(false);
-      engine.current?.setVolume(v);
-    },
-    [],
-  );
+  const setVolume = useCallback((v: number) => {
+    setVolumeState(v);
+    if (v > 0) setMuted(false);
+    engine.current?.setVolume(v);
+  }, []);
 
   const toggleMute = useCallback(() => {
     const next = !muted;
     setMuted(next);
     engine.current?.setMuted(next);
   }, [muted]);
-
-  const setMode = useCallback((m: MusicMode) => {
-    setModeState(m);
-    engine.current?.setMode(m);
-  }, []);
 
   const openGift = useCallback(() => {
     if (giftOpened) return;
@@ -137,9 +126,7 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
   const blowCandles = useCallback(() => {
     if (candlesBlown) return;
     setCandlesBlown(true);
-    // The party arrangement kicks in for the fireworks finale.
-    setMode("party");
-  }, [candlesBlown, setMode]);
+  }, [candlesBlown]);
 
   const value = useMemo<ExperienceValue>(
     () => ({
@@ -160,12 +147,10 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
         playing,
         volume,
         muted,
-        mode,
         toggle,
         start,
         setVolume,
         toggleMute,
-        setMode,
       },
     }),
     [
@@ -179,12 +164,10 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
       playing,
       volume,
       muted,
-      mode,
       toggle,
       start,
       setVolume,
       toggleMute,
-      setMode,
     ],
   );
 
